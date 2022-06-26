@@ -1,0 +1,12 @@
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" routerLink>Workers</a>
+        <div>
+            <a *ngIf="this.router.url != '/add'" routerLink="/add" class="btn btn-primary">
+                add
+            </a>
+            <a *ngIf="this.router.url != '/'" routerLink class="btn btn-info ms-2">users</a>
+        </div>
+    </div>
+</nav>
+<router-outlet></router-outlet>

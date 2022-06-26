@@ -1,0 +1,23 @@
+<div class="container mt-6 p-3">
+    <div class="row justify-content-center">
+        <div class="card col-6 p-3">
+            <form [formGroup]="newWorkerForm" (ngSubmit)="createNewUser()">
+                <div class=" mb-3">
+                    <label>firstname:</label>
+                    <input formControlName="firstname" type="text" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label>lastname:</label>
+                    <input formControlName="lastname" type="text" class="form-control">
+                </div>
+                <button class="btn btn-success" [disabled]="newWorkerForm.invalid" type="submit">
+                    save
+                </button>
+                <button class="btn btn-danger ms-3" [disabled]="newWorkerForm.invalid" type="reset">
+                    reset
+                </button>
+            </form>
+        </div>
+    </div>
+
+</div>

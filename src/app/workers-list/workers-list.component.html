@@ -1,0 +1,26 @@
+<div class="container mt-3 justify-content-center d-flex">
+  <div class="col-8">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let user of users,let i = index">
+        <tr>
+          <td>{{ i }}</td>
+          <td>{{ user["firstname"] }}</td>
+          <td>{{ user["lastname"] }}</td>
+          <td>
+            <button class="btn btn-danger me-2" (click)="deleteUser(i)">delete</button>
+            <button class="btn btn-info" (click)="edit(i)">edit</button>
+          </td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
